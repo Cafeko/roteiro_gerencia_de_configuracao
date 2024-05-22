@@ -14,3 +14,4 @@ Scenario: Entrar na tela de itens
     Given estou na aba “Cardápio” da tela “Editor de cardápio”
     When seleciono a opção “Itens”
     Then estou na aba “Itens” da tela “Editor de cardápio”
+    And novo passo necessario
