@@ -29,3 +29,4 @@ Scenario: Tentar ir para a tela de adicionar item sem ter criado nenhuma categor
     And estou na aba “Categorias” da tela “Editor de cardápio”
 
 dev1
+dev2
