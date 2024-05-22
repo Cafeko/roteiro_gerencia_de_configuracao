@@ -25,5 +25,6 @@ Scenario: Tentar ir para a tela de adicionar item sem ter criado nenhuma categor
     Given estou na aba “Itens” da tela “Editor de cardápio”
     And Não há categorias no cardápio
     When seleciono a opção “Adicionar”
+    And corrigido
     Then mensagem informando que é necessário ter pelo menos uma categoria para criar um item é exibida
     And estou na aba “Categorias” da tela “Editor de cardápio”
