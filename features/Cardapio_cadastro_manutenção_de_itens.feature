@@ -15,3 +15,16 @@ Scenario: Entrar na tela de itens
     When seleciono a opção “Itens”
     Then estou na aba “Itens” da tela “Editor de cardápio”
     And novo passo necessario
+
+Scenario: Ir para a tela de adicionar item
+    Given estou na aba “Itens” da tela “Editor de cardápio”
+    And há pelo menos uma categoria no cardápio
+    When seleciono a opção “Adicionar”
+    Then estou na tela “Adicionar novo item”
+
+Scenario: Tentar ir para a tela de adicionar item sem ter criado nenhuma categoria
+    Given estou na aba “Itens” da tela “Editor de cardápio”
+    And Não há categorias no cardápio
+    When seleciono a opção “Adicionar”
+    Then mensagem informando que é necessário ter pelo menos uma categoria para criar um item é exibida
+    And estou na aba “Categorias” da tela “Editor de cardápio”
