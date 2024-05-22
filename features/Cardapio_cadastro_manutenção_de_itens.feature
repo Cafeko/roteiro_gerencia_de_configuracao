@@ -34,3 +34,17 @@ Scenario: Tentar ir para a tela de adicionar item sem ter criado nenhuma categor
 
 dev1
 dev2
+
+Scenario: Adicionar item no cardápio
+    Given estou na tela “Adicionar novo item”
+    And categoria “Doce” existe no cardápio
+    When preencho o campo “nome” com “brigadeiro”
+    And preencho o campo “preço” com “R$ 2,00”
+    And preencho o campo “descrição ” com “brigadeiro normal”
+    And adiciono a imagem “brigadeiro_foto.jpeg” como foto do item
+    And seleciono a opção “Adicionar categoria”
+    And seleciono a categoria “Doce”
+    And seleciono a opção “Salvar”
+    Then Mensagem informando que o item foi salvo é exibida
+    And estou na aba “Cardápio” da tela “Editor de cardápio”
+    And vejo item “brigadeiro” exibido na categoria “Doce”
