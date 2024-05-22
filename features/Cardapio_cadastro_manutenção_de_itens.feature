@@ -14,3 +14,9 @@ Scenario: Entrar na tela de itens
     Given estou na aba “Cardápio” da tela “Editor de cardápio”
     When seleciono a opção “Itens”
     Then estou na aba “Itens” da tela “Editor de cardápio”
+
+Scenario: Ir para a tela de adicionar item
+    Given estou na aba “Itens” da tela “Editor de cardápio”
+    And há pelo menos uma categoria no cardápio
+    When seleciono a opção “Adicionar”
+    Then estou na tela “Adicionar novo item”
