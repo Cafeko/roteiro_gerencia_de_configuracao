@@ -27,3 +27,5 @@ Scenario: Tentar ir para a tela de adicionar item sem ter criado nenhuma categor
     When seleciono a opção “Adicionar”
     Then mensagem informando que é necessário ter pelo menos uma categoria para criar um item é exibida
     And estou na aba “Categorias” da tela “Editor de cardápio”
+
+dev1
